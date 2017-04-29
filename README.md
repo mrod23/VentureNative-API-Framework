@@ -7,14 +7,19 @@ Installation Instructions are listed below:
 In Server folder enter in your credentials for AWS and Mandrill-API
 
 To install all the dependencies: 
-$ npm install 
+
+$ npm install
+
 $ bower install 
 
-To run the app 
+To run the app: 
+
 $ npm run 
 
-To Dockerize the App
+To Dockerize the App:
+
 $ docker-compose build
+
 $ docker-compose up 
 
 
