@@ -1,0 +1,42 @@
+{
+  "name": "City",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "city": {
+      "type": "string",
+      "index": true
+    },
+    "country": {
+      "type": "string",
+      "index": true
+    },
+    "geoLocation": {
+      "type": "geopoint",
+      "required": false,
+      "index": true
+    },
+    "name": {
+      "type": "string",
+      "index": true
+    },
+    "postalCode": {
+      "type": "string",
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "venture": {
+      "type": "hasMany",
+      "model": "Venture",
+      "foreignKey": "ventures"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

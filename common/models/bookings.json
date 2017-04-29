@@ -1,0 +1,73 @@
+{
+  "name": "Booking",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dateCreated": {
+      "type": "date",
+      "index": true,
+      "description": "created information",
+      "defaultFn": "now"
+    },
+    "lastUpdate": {
+      "type": "date",
+      "index": true,
+      "description": "created information",
+      "defaultFn": "now"
+    },
+    "lastUpdatedBy": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "index": true
+    },
+    "requestedDate": {
+      "type": "date",
+      "required": true,
+      "index": true,
+      "description": "date selected"
+    },
+    "requestedTime": {
+      "type": "date",
+      "required": true,
+      "index": true,
+      "description": "time of day 0-23 hours"
+    },
+    "venture": {
+      "type": "string",
+      "required": true,
+      "index": true,
+      "description": "venture id lkjlkdfjasf"
+    },
+    "user": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "status": {
+      "type": "string",
+      "index": true,
+      "default": "pending"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "venture": {
+      "type": "belongsTo",
+      "model": "Venture",
+      "foreignKey": "venture"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "user"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

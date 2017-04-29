@@ -1,0 +1,40 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "vn-Database": {
+    "host": "ec2-54-162-49-39.compute-1.amazonaws.com",
+    "port": 27017,
+    "database": "vn-qa",
+    "password": "vnpassword",
+    "name": "vn-Database",
+    "user": "vn-db-qa",
+    "connector": "mongodb"
+  },
+  "files": {
+    "name": "files",
+    "provider": "amazon",
+    "acl": "public-read",
+    "connector": "loopback-component-storage",
+      "keyId": "ENTER YOUR OWN",
+      "key": "ENTER YOUR OWN"
+  },
+  "mandrill-email": {
+    "name": "mandrill-email",
+    "connector": "mail",
+    "transports": [{
+         "type": "smtp",
+         "host": "smtp.mandrillapp.com",
+         "secure": false,
+         "port": 587,
+         "tls": {
+           "rejectUnauthorized": false
+         },
+         "auth": {
+           "user": "ENTER YOUR OWN",
+           "pass": "ENTER YOUR OWN"
+         }
+    }]
+  }
+}

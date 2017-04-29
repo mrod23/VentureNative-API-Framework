@@ -1,0 +1,44 @@
+{
+  "name": "venturenative-api",
+  "version": "1.1.0",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "./node_modules/pm2/bin/pm2 start processes.json --no-daemon",
+    "pretest": "eslint .",
+    "posttest": "nsp check"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "cors": "^2.8.0",
+    "helmet": "^2.1.2",
+    "jade": "^1.11.0",
+    "lb-connector-mandrill": "0.0.3",
+    "loopback": "^2.31.0",
+    "loopback-boot": "^2.21.0",
+    "loopback-component-explorer": "^2.5.0",
+    "loopback-component-passport": "^2.1.0",
+    "loopback-component-storage": "^1.9.1",
+    "loopback-connector-mongodb": "^1.15.2",
+    "loopback-datasource-juggler": "^2.50.0",
+    "mandrill-api": "^1.0.45",
+    "minimatch": "^3.0.3",
+    "mustache": "^2.2.1",
+    "node-gyp": "^3.4.0",
+    "pm2": "^1.1.3",
+    "querystring": "^0.2.0",
+    "request": "^2.74.0",
+    "serve-favicon": "^2.3.0",
+    "stripe": "^4.10.0",
+    "strong-error-handler": "^1.0.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "engine": {
+    "node": "4.5.0"
+  },
+  "license": "UNLICENSED",
+  "description": "venturenative-api"
+}

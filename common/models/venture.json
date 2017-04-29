@@ -1,0 +1,80 @@
+{
+  "name": "Venture",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "days": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "index": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "featured": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "host": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "images": {
+      "type": "array",
+      "default": []
+    },
+    "duration": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "index": true
+    },
+    "rideIncluded": {
+      "type": "boolean",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "host": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "host"
+    },
+    "city": {
+      "type": "belongsTo",
+      "model": "City",
+      "foreignKey": "city"
+    },
+    "days": {
+      "type": "hasMany",
+      "model": "Day",
+      "foreignKey": "days"
+    },
+    "bookings": {
+      "type": "hasMany",
+      "model": "Booking",
+      "foreignKey": "venture"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

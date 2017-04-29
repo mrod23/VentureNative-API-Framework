@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "vn-Database",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": "vn-Database",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
+
+  },
+  "AccessToken": {
+    "dataSource": "vn-Database",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "vn-Database",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "vn-Database",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "vn-Database",
+    "public": false
+  },
+  "Booking": {
+    "dataSource": "vn-Database",
+    "public": true,
+    "$promise": {},
+    "$resolved": true,
+    "strict": true
+  },
+  "Venture": {
+    "dataSource": "vn-Database",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "City": {
+    "dataSource": "vn-Database",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Day": {
+    "dataSource": "vn-Database",
+    "public": true,
+    "strict": true
+  },
+  "Container": {
+    "dataSource": "files",
+    "public": true
+  },
+  "Email": {
+        "dataSource": "mandrill-email"
+  }
+}

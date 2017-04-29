@@ -1,0 +1,32 @@
+{
+  "name": "Day",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dayOfWeek": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true
+    },
+    "fromTime": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true
+    },
+    "toTime": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
